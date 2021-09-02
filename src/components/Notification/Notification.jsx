@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Notification.css';
 
-class Notification extends Component {
-    render() {
+function Notification ({message}) {
         return (
-            <p className="Notification__content">{this.props.message}</p>
+            <p className="Notification__content">{message}</p>
         )
-    }
+    
 }
 
 export default Notification;

@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './FeedbackOptions.css';
 
-class FeedbackOptions extends Component {
-    render() {
+function FeedbackOptions ({options, onLeaveFeedback}) {
         return (
             <div className="Button__container">
-                {this.props.options.map(option => (
+                {options.map(option => (
                     <button
                         className="Button"
-                        onClick={this.props.onLeaveFeedback}
+                        onClick={onLeaveFeedback}
                         key={option}
                     >
                         {option}
@@ -16,7 +15,6 @@ class FeedbackOptions extends Component {
                 ))}
             </div>
         )
-    }
 }
 
 export default FeedbackOptions;
